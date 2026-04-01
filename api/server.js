@@ -1,8 +1,8 @@
-require("dotenv").config();
+require("dotenv").config({ override: true });
 
 const express = require("express");
 const cors = require("cors");
-const cookieParser  = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 
 // ROUTERS
@@ -11,7 +11,7 @@ const studentRouter = require("./router/student.router")
 const classRouter = require("./router/class.router")
 const subjectRouter = require("./router/subject.router")
 const teacherRouter = require('./router/teacher.router')
-const examRouter =  require('./router/examination.router')
+const examRouter = require('./router/examination.router')
 const attendanceRoutes = require('./router/attendance.router');
 const periodRoutes = require("./router/period.router");
 const noticeRoutes = require("./router/notice.router");
@@ -22,20 +22,20 @@ const app = express();
 
 // middleware 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-const corsOptions = {exposedHeaders:"Authorization"}
+const corsOptions = { exposedHeaders: "Authorization" }
 app.use(cors(corsOptions));
 
 // MONGODB CONNECTION
-mongoose.connect(`mongodb+srv://akcoder1102004:ak@schoolmanagement.9ltii0g.mongodb.net/?retryWrites=true&w=majority&appName=schoolManagement`).then(db=>{
+process.env.MONGODB_URI = "mongodb+srv://230081601025_db_user:5S6PBKjVsVSTNT9k@cluster0.evth2h0.mongodb.net/?appName=Cluster0";
+mongoose.connect(process.env.MONGODB_URI).then(db => {
     console.log("MongoDb is Connected Successfully.")
-}).catch(e=>{
-    console.log("MongoDb Error",e)
+}).catch(e => {
+    console.log("MongoDb Error", e)
 })
 
-app.get("/",(req,res)=>
-{
+app.get("/", (req, res) => {
     res.send(`Spark Solutions Built this APP`)
 })
 
@@ -47,13 +47,14 @@ app.use("/api/class", classRouter)
 app.use("/api/subject", subjectRouter)
 app.use('/api/examination', examRouter)
 app.use('/api/attendance', attendanceRoutes)
-app.use('/api/period',  periodRoutes)
+app.use('/api/period', periodRoutes)
 app.use('/api/notices', noticeRoutes)
 
-app.get('/api/auth/check',authCheck)
+app.get('/api/auth/check', authCheck)
 
 
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, ()=>{
-    console.log("Server is running at port =>",PORT)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log("Server is running at port =>", PORT)
+
 })

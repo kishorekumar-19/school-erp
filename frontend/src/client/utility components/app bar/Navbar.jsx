@@ -57,11 +57,11 @@ function Navbar() {
           >
             <img
               src='./images/static/school_management_system.png'
-              height="50"
-              alt="School Management System Logo"
-              style={{ marginRight: '8px' }}
+              height="40"
+              alt="EduSync Logo"
+              style={{ marginRight: '12px', borderRadius: '8px' }}
             />
-            MULTIPLE SCHOOL MANAGEMENT SYSTEM
+            EduSync
           </Typography>
 
           {/* Mobile menu button */}
@@ -129,7 +129,7 @@ function Navbar() {
               flexGrow: 1,
             }}
           >
-            SMS
+            EduSync
           </Typography>
 
           {/* Desktop buttons */}
@@ -152,8 +152,8 @@ function Navbar() {
                     transition: 'all 0.3s ease',
                     '&:hover': {
                       backgroundColor: theme.palette.primary.dark,
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                      transform: 'translateY(-2px)',
+                      boxShadow: `0 6px 16px ${theme.palette.primary.main}40`,
                     },
                   }}
                 >
@@ -174,8 +174,8 @@ function Navbar() {
                     transition: 'all 0.3s ease',
                     '&:hover': {
                       backgroundColor: theme.palette.secondary.dark,
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                      transform: 'translateY(-2px)',
+                      boxShadow: `0 6px 16px ${theme.palette.secondary.main}40`,
                     },
                   }}
                 >

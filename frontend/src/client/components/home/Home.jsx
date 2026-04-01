@@ -6,10 +6,17 @@ import {
   Card,
   CardContent,
   Grid,
+  Button
 } from "@mui/material";
 import SwipeableViews from "react-swipeable-views";
 import Carousel from "./carousel/Carousel";
 import Gallery from "./gallery/Gallery";
+import SchoolIcon from '@mui/icons-material/School';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import AssessmentIcon from '@mui/icons-material/Assessment';
 
 const Home = () => {
   const testimonials = [
@@ -48,8 +55,72 @@ const Home = () => {
       {/* Carousel Section */}
       <Carousel />
 
+      {/* Features for Students */}
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
+        <Typography variant="h3" align="center" gutterBottom sx={{ fontWeight: 800, mb: 2 }}>
+          Empowering Students
+        </Typography>
+        <Typography variant="h6" align="center" color="text.secondary" mb={6} sx={{ maxWidth: 600, mx: 'auto' }}>
+          Interactive tools and resources designed to make learning engaging and effective.
+        </Typography>
+        <Grid container spacing={4} justifyContent="center">
+          {[
+            { title: "Interactive Learning", icon: <LibraryBooksIcon fontSize="large" color="primary" />, desc: "Access study materials, assignments, and quizzes anytime." },
+            { title: "Track Progress", icon: <AssessmentIcon fontSize="large" color="secondary" />, desc: "Keep track of your academic performance with detailed analytics." },
+            { title: "Achievements", icon: <EmojiEventsIcon fontSize="large" sx={{ color: '#fbbf24' }} />, desc: "Earn recognition for your hard work and participation." }
+          ].map((feature, idx) => (
+            <Grid item xs={12} sm={4} key={idx}>
+              <Box sx={{ textAlign: 'center', p: 3 }}>
+                <Box sx={{ mb: 2, display: 'inline-flex', p: 2, borderRadius: '50%', bgcolor: 'background.paper', boxShadow: 2 }}>
+                  {feature.icon}
+                </Box>
+                <Typography variant="h5" sx={{ fontWeight: 600, mb: 1.5 }}>
+                  {feature.title}
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {feature.desc}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      {/* Benefits for Parents */}
+      <Box sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 10 } }}>
+        <Container maxWidth="lg">
+          <Typography variant="h3" align="center" gutterBottom sx={{ fontWeight: 800, mb: 2 }}>
+            Peace of Mind for Parents
+          </Typography>
+          <Typography variant="h6" align="center" color="text.secondary" mb={6} sx={{ maxWidth: 600, mx: 'auto' }}>
+            Stay connected with your child's educational journey every step of the way.
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+            {[
+              { title: "Real-time Updates", icon: <NotificationsActiveIcon fontSize="large" color="primary" />, desc: "Get instant notifications on attendance, grades, and events." },
+              { title: "Direct Communication", icon: <SupervisorAccountIcon fontSize="large" sx={{ color: '#10b981' }} />, desc: "Easily communicate with teachers and school administrators." },
+              { title: "Holistic Overview", icon: <SchoolIcon fontSize="large" color="secondary" />, desc: "View a complete profile of your child's academic life." }
+            ].map((benefit, idx) => (
+              <Grid item xs={12} sm={4} key={idx}>
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', p: 4, borderRadius: 4 }}>
+                  <Box sx={{ mb: 2 }}>
+                    {benefit.icon}
+                  </Box>
+                  <Typography variant="h5" sx={{ fontWeight: 600, mb: 1.5, textAlign: 'center' }}>
+                    {benefit.title}
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" textAlign="center">
+                    {benefit.desc}
+                  </Typography>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
       {/* Programs Section */}
-      <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
         <Typography
           variant="h4"
           align="center"
@@ -103,25 +174,27 @@ const Home = () => {
       </Container>
 
       {/* Gallery Section */}
-      <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
-        <Typography
-          variant="h4"
-          align="center"
-          gutterBottom
-          sx={{ fontWeight: 700 }}
-        >
-          Registered Schools
-        </Typography>
-        <Typography
-          variant="body1"
-          align="center"
-          color="text.secondary"
-          mb={5}
-        >
-          See some of the schools that have joined our platform.
-        </Typography>
-        <Gallery />
-      </Container>
+      <Box sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 10 } }}>
+        <Container maxWidth="lg">
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+            sx={{ fontWeight: 700 }}
+          >
+            Registered Schools
+          </Typography>
+          <Typography
+            variant="body1"
+            align="center"
+            color="text.secondary"
+            mb={5}
+          >
+            See some of the schools that have joined our platform.
+          </Typography>
+          <Gallery />
+        </Container>
+      </Box>
 
       {/* Testimonials Section */}
       <Box
