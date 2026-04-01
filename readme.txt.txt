@@ -24,7 +24,7 @@ FRONTEND:
 a. Routing
 b. Protection of Route
 
-Updated by Kishore - backend changes
+Updated by Manoj and Kishore
 c. Axios library (http call to server)
 d. Formik and  Yup (Form handling - error handling specially)
 e. State Management ( react-redux, redux-toolkit)
