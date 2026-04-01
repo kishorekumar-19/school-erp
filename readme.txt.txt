@@ -8,6 +8,8 @@ api (folder)
 npm i (install all packages for backend)
 npm start ( start the server)
 
+Branch manoj: Added this line for manoj branch.
+
 PREREQUISITE:
 1. Node and Npm installed
 2. text editor (VS code - I have used)
