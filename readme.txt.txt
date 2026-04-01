@@ -6,7 +6,9 @@ npm run dev(run the frontend application)
 STARTING BACKEND (API):
 api (folder)
 npm i (install all packages for backend)
-npm start (start the server) - modified by kishore
+npm start (start the server) - resolved conflict
+
+Branch manoj: Added this line for manoj branch.
 
 PREREQUISITE:
 1. Node and Npm installed
