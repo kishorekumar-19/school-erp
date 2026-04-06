@@ -2,7 +2,7 @@ import { Box, Button, Table, TableBody, TableCell, TableContainer, TableHead, Ta
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { baseUrl } from "../../../environment";
-// import "./teacherDetails.css"
+// import the "./teacherDetails.css"
 export default function TeacherDetails(){
     const [teacher, setTeacher] = useState(null)
 
