@@ -6,7 +6,7 @@ npm run dev(run the frontend application)
 STARTING BACKEND (API):
 api (folder)
 npm i (install all packages for backend)
-npm start (start the server) - modified by manoj
+npm start (start the server) - resolved conflict
 
 Branch manoj: Added this line for manoj branch.
 
@@ -24,7 +24,7 @@ FRONTEND:
 a. Routing
 b. Protection of Route
 
-Updated by Manoj - frontend changes
+Updated by Manoj and Kishore
 c. Axios library (http call to server)
 d. Formik and  Yup (Form handling - error handling specially)
 e. State Management ( react-redux, redux-toolkit)
