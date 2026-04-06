@@ -14,7 +14,7 @@ const AttendanceTeacher = () => {
   
   const todayDate = moment().format('YYYY-MM-DD'); // Get today's date in 'YYYY-MM-DD' format
 
-  // Fetch all students and check if attendance is already taken
+  // Fetch all students and check if attendance is already taken by teacher
   useEffect(() => {
     const fetchStudentsAndCheckAttendance = async () => {
       try {
