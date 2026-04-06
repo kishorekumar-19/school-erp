@@ -1,4 +1,4 @@
-// models/Period.js
+// models/Period.js done it
 const mongoose = require('mongoose');
 
 const periodSchema = new mongoose.Schema({
