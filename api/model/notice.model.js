@@ -1,4 +1,4 @@
-// models/Notice.js
+// models/Notice.js done it
 const mongoose = require("mongoose");
 
 const NoticeSchema = new mongoose.Schema({

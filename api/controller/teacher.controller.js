@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs")
 const jwt = require('jsonwebtoken');
-
+// done it
 const jwtSecret = process.env.JWTSECRET;
 
 const Teacher = require("../model/teacher.model");

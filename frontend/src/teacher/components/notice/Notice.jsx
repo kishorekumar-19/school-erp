@@ -3,7 +3,7 @@ import { Box, Button, MenuItem, Paper, Select, TextField, Typography } from "@mu
 import axios from "axios";
 import { baseUrl } from "../../../environment";
 import NoData from "../../../basic utility components/NoData";
-
+/* notice*/
 const NoticeTeacher = () => {
  
 

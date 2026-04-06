@@ -1,6 +1,6 @@
 const Notice = require("../model/notice.model");
 
-// Route to add a new notice
+// Route to add a new notice is done
 exports.newNotice = async (req, res) => {
   const { title, message, audience} = req.body;
   const schoolId = req.user.schoolId;

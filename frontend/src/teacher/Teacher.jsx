@@ -20,7 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Outlet, useNavigate } from "react-router-dom";
 
-// ICONS
+// ICONS buttons aded
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupIcon from '@mui/icons-material/Group';
 import TheatersIcon from '@mui/icons-material/Theaters';

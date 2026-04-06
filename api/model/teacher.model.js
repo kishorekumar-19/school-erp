@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// done it
 const teacherSchema = new mongoose.Schema({
     school:{type:mongoose.Schema.ObjectId, ref:'School'},
     email:{ type: String,  required:true },
